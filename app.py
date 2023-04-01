@@ -21,7 +21,8 @@ from PIL import Image
 app = Flask(__name__)
 
 # Load your trained model
-model = load_model('C:/Users/mattg/OneDrive/Documents/vscode/epoch100_Unet.h5', compile=False)
+model_path = os.path.join(os.getcwd(), 'epoch100_Unet.h5')
+model = load_model(model_path, compile=False)
 
 
 # Define a route for your API
